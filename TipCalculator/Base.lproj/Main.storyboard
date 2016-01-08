@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,141 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-dG-D5a">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="subtotal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9t-RH-zFl">
+                                <rect key="frame" x="236" y="50" width="128" height="30"/>
+                                <color key="backgroundColor" red="0.10443275809999999" green="1" blue="0.02683838979" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-rB-BAY">
+                                <rect key="frame" x="236" y="100" width="50" height="50"/>
+                                <state key="normal" image="15_unselected_image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fifteenTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ijc-7A-8Qf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbR-Pl-1zm">
+                                <rect key="frame" x="314" y="100" width="50" height="50"/>
+                                <state key="normal" image="20_unselected_image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twentyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jtc-3c-3MG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEv-Pg-Yvd">
+                                <rect key="frame" x="372" y="100" width="50" height="50"/>
+                                <state key="normal" image="25_unselected_image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twentyFiveTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IVE-eN-lm1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsQ-g7-Yoc">
+                                <rect key="frame" x="284" y="140" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tip" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-BQ-2RZ">
+                                <rect key="frame" x="236" y="175" width="128" height="30"/>
+                                <color key="backgroundColor" red="0.10443275809999999" green="1" blue="0.02683838979" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="total" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdw-cB-KZj">
+                                <rect key="frame" x="236" y="213" width="128" height="30"/>
+                                <color key="backgroundColor" red="0.10443275809999999" green="1" blue="0.02683838979" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmO-WE-BjH">
+                                <rect key="frame" x="178" y="100" width="50" height="50"/>
+                                <state key="normal" image="10_unselected_image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tenTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHf-mr-1lV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlK-Pv-fiT">
+                                <rect key="frame" x="277" y="300" width="46" height="36"/>
+                                <state key="normal" image="up_arrow_image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="morePeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dW6-ef-JhK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-Ny-HQ2">
+                                <rect key="frame" x="277" y="435" width="46" height="36"/>
+                                <state key="normal" image="down_arrow_image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lessPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnE-3E-y1b"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="people" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ZD-Vo-YS3">
+                                <rect key="frame" x="236" y="350" width="128" height="30"/>
+                                <color key="backgroundColor" red="0.10443275809999999" green="1" blue="0.02683838979" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="split total cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zoy-lB-kag">
+                                <rect key="frame" x="236" y="388" width="128" height="30"/>
+                                <color key="backgroundColor" red="0.10443275809999999" green="1" blue="0.02683838979" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IEv-Pg-Yvd" firstAttribute="leading" secondItem="JbR-Pl-1zm" secondAttribute="trailing" id="0qS-Uc-f9R"/>
+                            <constraint firstAttribute="centerX" secondItem="6ZD-Vo-YS3" secondAttribute="centerX" id="0xy-6A-LnA"/>
+                            <constraint firstAttribute="centerX" secondItem="Ydt-dG-D5a" secondAttribute="centerX" id="27x-77-Kce"/>
+                            <constraint firstAttribute="centerX" secondItem="a9t-RH-zFl" secondAttribute="centerX" id="2yF-Te-dbi"/>
+                            <constraint firstItem="OsQ-g7-Yoc" firstAttribute="leading" secondItem="I7c-rB-BAY" secondAttribute="trailing" id="8MK-72-6mh"/>
+                            <constraint firstAttribute="centerX" secondItem="gUI-BQ-2RZ" secondAttribute="centerX" id="GnQ-Bq-eD3"/>
+                            <constraint firstAttribute="centerX" secondItem="OsQ-g7-Yoc" secondAttribute="centerX" id="Gue-EO-def"/>
+                            <constraint firstAttribute="centerX" secondItem="zoy-lB-kag" secondAttribute="centerX" id="UlH-2n-ifQ"/>
+                            <constraint firstAttribute="centerX" secondItem="iW5-Ny-HQ2" secondAttribute="centerX" id="YWZ-co-9du"/>
+                            <constraint firstItem="JbR-Pl-1zm" firstAttribute="leading" secondItem="OsQ-g7-Yoc" secondAttribute="trailing" id="gQu-Hl-vDB"/>
+                            <constraint firstAttribute="centerX" secondItem="Cdw-cB-KZj" secondAttribute="centerX" id="iLJ-bD-irs"/>
+                            <constraint firstAttribute="centerX" secondItem="xlK-Pv-fiT" secondAttribute="centerX" id="lUp-CY-J8Q"/>
+                            <constraint firstItem="I7c-rB-BAY" firstAttribute="leading" secondItem="dmO-WE-BjH" secondAttribute="trailing" id="umK-Rm-HD7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundFade" destination="Ydt-dG-D5a" id="XAF-Su-Vv9"/>
+                        <outlet property="buttonFifteen" destination="I7c-rB-BAY" id="Emh-tR-Llu"/>
+                        <outlet property="buttonTen" destination="dmO-WE-BjH" id="d3W-Gd-pSi"/>
+                        <outlet property="buttonTwenty" destination="JbR-Pl-1zm" id="UdV-YV-FOc"/>
+                        <outlet property="buttonTwentyFive" destination="IEv-Pg-Yvd" id="ZbY-DF-Yfp"/>
+                        <outlet property="moneyToSplit" destination="zoy-lB-kag" id="sag-xM-K6b"/>
+                        <outlet property="peopleToSplit" destination="6ZD-Vo-YS3" id="t4b-oc-xTV"/>
+                        <outlet property="subtotalText" destination="a9t-RH-zFl" id="aiQ-zZ-dqE"/>
+                        <outlet property="tipText" destination="gUI-BQ-2RZ" id="fwc-tD-gND"/>
+                        <outlet property="totalText" destination="Cdw-cB-KZj" id="En1-ad-4L9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="10_unselected_image" width="67" height="67"/>
+        <image name="15_unselected_image" width="67" height="67"/>
+        <image name="20_unselected_image" width="67" height="67"/>
+        <image name="25_unselected_image" width="67" height="67"/>
+        <image name="down_arrow_image" width="40" height="36"/>
+        <image name="up_arrow_image" width="40" height="36"/>
+    </resources>
 </document>
